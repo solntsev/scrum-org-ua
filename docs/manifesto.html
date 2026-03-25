@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agile-маніфест українською — Scrum.org.ua</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #F5F2EE;
+      color: #1A1A1A;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .page { max-width: 1080px; margin: 0 auto; }
+
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 32px 48px;
+    }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; }
+    .nav-logo {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 22px; color: #1A1A1A;
+      letter-spacing: -0.03em; text-decoration: none;
+    }
+    .nav-label {
+      font-weight: 300; font-size: 13px; color: #8A8580;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+    .nav-links a { font-weight: 400; font-size: 15px; color: #1A1A1A; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: #E63B2E; }
+    .nav-links .muted { color: #8A8580; }
+
+    .hero {
+      padding: 48px 48px 0;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      font-weight: 400; font-size: 12px; color: #E63B2E;
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 44px; color: #1A1A1A;
+      letter-spacing: -0.03em; line-height: 48px; margin-bottom: 20px;
+    }
+    .hero-intro {
+      font-weight: 300; font-size: 17px; color: #5A5550;
+      line-height: 28px; max-width: 640px; margin: 0 auto;
+    }
+
+    .values {
+      padding: 56px 48px 0;
+      display: flex; flex-direction: column; gap: 32px;
+      max-width: 720px; margin: 0 auto;
+    }
+    .value-row {
+      display: flex; align-items: baseline; gap: 16px;
+    }
+    .value-left {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 22px; color: #1A1A1A;
+      letter-spacing: -0.02em; line-height: 28px;
+      flex: 1;
+    }
+    .value-over {
+      font-weight: 300; font-size: 15px; color: #8A8580;
+      flex-shrink: 0; white-space: nowrap;
+    }
+    .value-right {
+      font-weight: 300; font-size: 17px; color: #8A8580;
+      line-height: 24px;
+      flex: 1;
+    }
+
+    .values-note {
+      padding: 32px 48px 0;
+      text-align: center;
+      font-weight: 300; font-size: 15px; color: #8A8580;
+      line-height: 24px;
+      max-width: 640px; margin: 0 auto;
+    }
+
+    .divider {
+      margin: 56px 48px 0;
+      height: 1px;
+      background-color: rgba(26,26,26,0.1);
+    }
+
+    .principles {
+      padding: 56px 48px 0;
+      max-width: 720px; margin: 0 auto;
+    }
+    .principles-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 32px; color: #1A1A1A;
+      letter-spacing: -0.02em; line-height: 36px; margin-bottom: 8px;
+      text-align: center;
+    }
+    .principles-subtitle {
+      font-weight: 300; font-size: 15px; color: #8A8580;
+      text-align: center; margin-bottom: 40px;
+    }
+    .principle {
+      display: flex; gap: 20px; padding: 20px 0;
+      border-bottom: 1px solid rgba(26,26,26,0.06);
+    }
+    .principle:last-child { border-bottom: none; }
+    .principle-num {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 14px; color: #E63B2E;
+      width: 28px; flex-shrink: 0; padding-top: 2px;
+    }
+    .principle-text {
+      font-weight: 400; font-size: 16px; color: #1A1A1A;
+      line-height: 26px;
+    }
+
+    .signatories {
+      padding: 48px 48px 0;
+      text-align: center;
+      max-width: 640px; margin: 0 auto;
+    }
+    .signatories-label {
+      font-weight: 400; font-size: 12px; color: #E63B2E;
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .signatories-list {
+      font-weight: 300; font-size: 14px; color: #8A8580;
+      line-height: 24px;
+    }
+
+    .source {
+      padding: 40px 48px 0;
+      text-align: center;
+    }
+    .source a {
+      font-weight: 400; font-size: 14px; color: #E63B2E;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .source a:hover { color: #cc3226; }
+
+    .footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 40px 48px; margin-top: 56px;
+      border-top: 1px solid rgba(26,26,26,0.08);
+    }
+    .footer-left { display: flex; align-items: baseline; gap: 32px; }
+    .footer-logo {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 18px; color: #1A1A1A;
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .footer-left a { font-weight: 300; font-size: 13px; color: #8A8580; text-decoration: none; transition: color 0.2s; }
+    .footer-left a:hover { color: #1A1A1A; }
+    .footer-copy { font-weight: 300; font-size: 12px; color: #8A8580; }
+
+    @media (max-width: 768px) {
+      .nav, .hero, .values, .values-note, .principles, .signatories, .source, .footer { padding-left: 24px; padding-right: 24px; }
+      .divider { margin-left: 24px; margin-right: 24px; }
+      .nav-links { display: none; }
+      .nav-label { display: none; }
+      .hero-title { font-size: 32px; line-height: 36px; }
+      .value-row { flex-direction: column; gap: 4px; }
+      .value-over { display: none; }
+      .value-right { font-size: 15px; }
+      .value-right::before { content: "важливіше за "; color: #8A8580; }
+      .principles-title { font-size: 24px; }
+      .footer { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-left { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <nav class="nav">
+      <div class="nav-brand">
+        <a href="/" class="nav-logo">SCRUM.ORG.UA</a>
+        <span class="nav-label">Бібліотека</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/#books">Книги</a></li>
+        <li><a href="/#presentations">Презентації</a></li>
+        <li><a href="/#about" class="muted">Про нас</a></li>
+        <li><a href="/trends.html">Тренди</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Agile-маніфест</p>
+      <h1 class="hero-title">Маніфест гнучкої розробки програмного забезпечення</h1>
+      <p class="hero-intro">Ми постійно відкриваємо для себе досконаліші методи розробки програмного забезпечення, займаючись розробкою безпосередньо та допомагаючи у цьому іншим. Завдяки цій роботі ми дійшли висновку, що:</p>
+    </div>
+
+    <div class="values">
+      <div class="value-row">
+        <span class="value-left">Люди та співпраця</span>
+        <span class="value-over">важливіші за</span>
+        <span class="value-right">процеси та інструменти</span>
+      </div>
+      <div class="value-row">
+        <span class="value-left">Працюючий продукт</span>
+        <span class="value-over">важливіший за</span>
+        <span class="value-right">вичерпну документацію</span>
+      </div>
+      <div class="value-row">
+        <span class="value-left">Співпраця із замовником</span>
+        <span class="value-over">важливіша за</span>
+        <span class="value-right">обговорення умов контракту</span>
+      </div>
+      <div class="value-row">
+        <span class="value-left">Готовність до змін</span>
+        <span class="value-over">важливіша за</span>
+        <span class="value-right">дотримання плану</span>
+      </div>
+    </div>
+
+    <p class="values-note">Тобто, хоча цінності, що справа, важливі, ми все ж цінуємо більше те, що зліва.</p>
+
+    <div class="divider"></div>
+
+    <div class="principles">
+      <h2 class="principles-title">12 принципів Agile</h2>
+      <p class="principles-subtitle">Ми дотримуємося таких принципів:</p>
+
+      <div class="principle">
+        <span class="principle-num">01</span>
+        <p class="principle-text">Найвищим пріоритетом для нас є задоволення потреб замовника, шляхом завчасного та регулярного постачання програмного забезпечення.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">02</span>
+        <p class="principle-text">Схвальне ставлення до змін, навіть на заключних стадіях розробки. Agile-процеси дають змогу використовувати зміни задля конкурентної переваги замовника.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">03</span>
+        <p class="principle-text">Працюючий продукт слід випускати якомога частіше, з періодичністю від пари тижнів до пари місяців.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">04</span>
+        <p class="principle-text">Впродовж усього проєкту розробники і представники бізнесу повинні працювати разом щодня.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">05</span>
+        <p class="principle-text">Над проєктом повинні працювати вмотивовані професіонали. Для цього створіть їм потрібні умови, забезпечте підтримку і довірте їм виконання роботи.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">06</span>
+        <p class="principle-text">Особиста комунікація — найефективніший та найпрактичніший метод як донести інформацію до команди та всередині неї.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">07</span>
+        <p class="principle-text">Працюючий продукт — головний показник прогресу.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">08</span>
+        <p class="principle-text">Інвестори, розробники і користувачі повинні мати можливість підтримувати постійний ритм нескінченно. Agile допомагає налагодити такий сталий процес розробки.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">09</span>
+        <p class="principle-text">Постійна увага до технічної досконалості і якості проєктування підвищує гнучкість проєкту.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">10</span>
+        <p class="principle-text">Простота — мистецтво мінімізації зайвої роботи — вкрай необхідна.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">11</span>
+        <p class="principle-text">Найкращі вимоги, архітектурні та технічні рішення виникають у командах, що здатні самоорганізовуватись.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">12</span>
+        <p class="principle-text">Команда регулярно намагається знайти способи підвищення ефективності та відповідно коригує свою роботу.</p>
+      </div>
+    </div>
+
+    <div class="signatories">
+      <p class="signatories-label">Підписанти</p>
+      <p class="signatories-list">Kent Beck, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Jim Highsmith, Andrew Hunt, Ron Jeffries, Jon Kern, Brian Marick, Robert C. Martin, Steve Mellor, Ken Schwaber, Jeff Sutherland, Dave Thomas</p>
+    </div>
+
+    <div class="source">
+      <a href="https://agilemanifesto.org/iso/uk/manifesto.html" target="_blank" rel="noopener">agilemanifesto.org — оригінал</a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <a href="/" class="footer-logo">SCRUM.ORG.UA</a>
+        <a href="/#books">Книги</a>
+        <a href="/#presentations">Презентації</a>
+        <a href="/#about">Про нас</a>
+        <a href="/trends.html">Тренди</a>
+      </div>
+      <span class="footer-copy">&copy; 2010–2026 Спільнота перекладачів Agile літератури</span>
+    </footer>
+
+  </div>
+</body>
+</html>
