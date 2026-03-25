@@ -58,26 +58,28 @@
 
     .values {
       padding: 56px 48px 0;
-      display: flex; flex-direction: column; gap: 32px;
+      display: flex; flex-wrap: wrap; gap: 20px;
       max-width: 720px; margin: 0 auto;
     }
-    .value-row {
-      display: flex; align-items: baseline; gap: 16px;
+    .value-card {
+      flex: 1 1 calc(50% - 10px);
+      min-width: 280px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 32px;
+      display: flex; flex-direction: column; gap: 16px;
     }
-    .value-left {
+    .value-primary {
       font-family: 'Space Grotesk', system-ui, sans-serif;
-      font-weight: 700; font-size: 22px; color: #1A1A1A;
-      letter-spacing: -0.02em; line-height: 28px;
-      flex: 1;
+      font-weight: 700; font-size: 24px; color: #1A1A1A;
+      letter-spacing: -0.02em; line-height: 30px;
     }
-    .value-over {
-      font-weight: 300; font-size: 15px; color: #8A8580;
-      flex-shrink: 0; white-space: nowrap;
+    .value-secondary {
+      font-weight: 300; font-size: 14px; color: #8A8580;
+      line-height: 22px;
     }
-    .value-right {
-      font-weight: 300; font-size: 17px; color: #8A8580;
-      line-height: 24px;
-      flex: 1;
+    .value-secondary strong {
+      font-weight: 400; color: #8A8580;
     }
 
     .values-note {
@@ -168,10 +170,7 @@
       .nav-links { display: none; }
       .nav-label { display: none; }
       .hero-title { font-size: 32px; line-height: 36px; }
-      .value-row { flex-direction: column; gap: 4px; }
-      .value-over { display: none; }
-      .value-right { font-size: 15px; }
-      .value-right::before { content: "важливіше за "; color: #8A8580; }
+      .value-card { min-width: 100%; }
       .principles-title { font-size: 24px; }
       .footer { flex-direction: column; gap: 16px; text-align: center; }
       .footer-left { flex-wrap: wrap; justify-content: center; }
@@ -201,25 +200,21 @@
     </div>
 
     <div class="values">
-      <div class="value-row">
-        <span class="value-left">Люди та співпраця</span>
-        <span class="value-over">важливіші за</span>
-        <span class="value-right">процеси та інструменти</span>
+      <div class="value-card">
+        <div class="value-primary">Люди та співпраця</div>
+        <div class="value-secondary">важливіші за <strong>процеси та інструменти</strong></div>
       </div>
-      <div class="value-row">
-        <span class="value-left">Працюючий продукт</span>
-        <span class="value-over">важливіший за</span>
-        <span class="value-right">вичерпну документацію</span>
+      <div class="value-card">
+        <div class="value-primary">Працюючий продукт</div>
+        <div class="value-secondary">важливіший за <strong>вичерпну документацію</strong></div>
       </div>
-      <div class="value-row">
-        <span class="value-left">Співпраця із замовником</span>
-        <span class="value-over">важливіша за</span>
-        <span class="value-right">обговорення умов контракту</span>
+      <div class="value-card">
+        <div class="value-primary">Співпраця із замовником</div>
+        <div class="value-secondary">важливіша за <strong>обговорення умов контракту</strong></div>
       </div>
-      <div class="value-row">
-        <span class="value-left">Готовність до змін</span>
-        <span class="value-over">важливіша за</span>
-        <span class="value-right">дотримання плану</span>
+      <div class="value-card">
+        <div class="value-primary">Готовність до змін</div>
+        <div class="value-secondary">важливіша за <strong>дотримання плану</strong></div>
       </div>
     </div>
 
