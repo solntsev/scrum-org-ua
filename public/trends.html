@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тренди — Scrum.org.ua</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #F5F2EE;
+      color: #1A1A1A;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page { max-width: 1440px; margin: 0 auto; }
+
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 32px 80px;
+    }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; }
+    .nav-logo {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 22px; color: #1A1A1A;
+      letter-spacing: -0.03em; text-decoration: none;
+    }
+    .nav-label {
+      font-weight: 300; font-size: 13px; color: #8A8580;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+    .nav-links a { font-weight: 400; font-size: 15px; color: #1A1A1A; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: #E63B2E; }
+    .nav-links .muted { color: #8A8580; }
+
+    .hero { padding: 24px 80px 48px; }
+    .section-eyebrow {
+      font-weight: 400; font-size: 12px; color: #E63B2E;
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 40px; color: #1A1A1A;
+      letter-spacing: -0.03em; line-height: 44px; margin-bottom: 12px;
+    }
+    .section-desc {
+      font-weight: 300; font-size: 17px; color: #8A8580; line-height: 26px;
+    }
+
+    .feed-grid {
+      display: flex; flex-wrap: wrap; gap: 20px;
+      padding: 0 80px 64px;
+    }
+    .feed-card {
+      width: calc(50% - 10px);
+      background: #fff;
+      border-radius: 6px;
+      padding: 28px;
+      display: flex; flex-direction: column; gap: 12px;
+      transition: box-shadow 0.2s;
+      min-height: 180px;
+    }
+    .feed-card:hover { box-shadow: 0 2px 12px rgba(26,26,26,0.06); }
+    .feed-source {
+      font-weight: 400; font-size: 12px; color: #E63B2E;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .feed-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 600; font-size: 18px; color: #1A1A1A;
+      letter-spacing: -0.01em; line-height: 24px;
+    }
+    .feed-title a {
+      color: inherit; text-decoration: none; transition: color 0.2s;
+    }
+    .feed-title a:hover { color: #E63B2E; }
+    .feed-excerpt {
+      font-weight: 300; font-size: 14px; color: #5A5550; line-height: 22px;
+    }
+    .feed-date {
+      font-weight: 300; font-size: 12px; color: #8A8580; margin-top: auto;
+    }
+
+    .skeleton .feed-source,
+    .skeleton .feed-title,
+    .skeleton .feed-excerpt,
+    .skeleton .feed-date { color: transparent; border-radius: 4px; }
+    .skeleton .feed-source { background: rgba(26,26,26,0.06); width: 120px; height: 14px; }
+    .skeleton .feed-title { background: rgba(26,26,26,0.06); width: 80%; height: 20px; }
+    .skeleton .feed-excerpt { background: rgba(26,26,26,0.04); width: 100%; height: 44px; }
+    .skeleton .feed-date { background: rgba(26,26,26,0.04); width: 80px; height: 14px; }
+    @keyframes shimmer { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+    .skeleton { animation: shimmer 1.5s ease-in-out infinite; }
+
+    .feed-error {
+      font-weight: 300; font-size: 14px; color: #8A8580; line-height: 22px;
+    }
+    .feed-retry {
+      font-weight: 400; font-size: 13px; color: #E63B2E;
+      cursor: pointer; background: none; border: none; padding: 0;
+      text-decoration: underline; font-family: inherit;
+    }
+
+    .footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 40px 80px; border-top: 1px solid rgba(26,26,26,0.08);
+    }
+    .footer-left { display: flex; align-items: baseline; gap: 32px; }
+    .footer-logo {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 18px; color: #1A1A1A;
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .footer-left a { font-weight: 300; font-size: 13px; color: #8A8580; text-decoration: none; transition: color 0.2s; }
+    .footer-left a:hover { color: #1A1A1A; }
+    .footer-copy { font-weight: 300; font-size: 12px; color: #8A8580; }
+
+    @media (max-width: 1024px) {
+      .nav, .hero, .feed-grid, .footer { padding-left: 40px; padding-right: 40px; }
+    }
+    @media (max-width: 768px) {
+      .nav, .hero, .feed-grid, .footer { padding-left: 24px; padding-right: 24px; }
+      .nav-links { gap: 24px; }
+      .nav-label { display: none; }
+      .section-title { font-size: 28px; line-height: 32px; }
+      .feed-card { width: 100%; }
+      .footer { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-left { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <nav class="nav">
+      <div class="nav-brand">
+        <a href="/" class="nav-logo">SCRUM.ORG.UA</a>
+        <span class="nav-label">Бібліотека</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/#books">Книги</a></li>
+        <li><a href="/#presentations">Презентації</a></li>
+        <li><a href="/#about" class="muted">Про нас</a></li>
+        <li><a href="/trends.html">Тренди</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <p class="section-eyebrow">Тренди</p>
+      <h1 class="section-title">Agile світ сьогодні</h1>
+      <p class="section-desc">Найсвіжіші пости з 10 найкращих Agile блогів світу. Оновлюється автоматично.</p>
+    </div>
+
+    <div class="feed-grid" id="feed-grid"></div>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <a href="/" class="footer-logo">SCRUM.ORG.UA</a>
+        <a href="/#books">Книги</a>
+        <a href="/#presentations">Презентації</a>
+        <a href="/#about">Про нас</a>
+        <a href="/trends.html">Тренди</a>
+      </div>
+      <span class="footer-copy">&copy; 2010–2026 Спільнота перекладачів Agile літератури</span>
+    </footer>
+
+  </div>
+
+  <script>
+    const FEEDS = [
+      { name: 'Mountain Goat Software', url: 'https://www.mountaingoatsoftware.com/blog/rss' },
+      { name: 'Ron Jeffries', url: 'https://ronjeffries.com/feed.xml' },
+      { name: 'Agile Alliance', url: 'https://www.agilealliance.org/feed/' },
+      { name: 'Leading Agile', url: 'https://www.leadingagile.com/feed/' },
+      { name: 'Age of Product', url: 'https://age-of-product.com/feed/' },
+      { name: 'Serious Scrum', url: 'https://medium.com/feed/serious-scrum' },
+      { name: 'Scrum Master Toolbox', url: 'https://scrum-master-toolbox.org/feed/' },
+      { name: 'Jason Fried (Hey)', url: 'https://world.hey.com/jason/feed.atom' },
+      { name: 'Martin Fowler', url: 'https://martinfowler.com/feed.atom' },
+      { name: 'Atlassian Agile', url: 'https://www.atlassian.com/blog/agile/feed' },
+    ];
+
+    const PROXY = 'https://corsproxy.io/?url=';
+    const CACHE_TTL = 30 * 60 * 1000;
+    const grid = document.getElementById('feed-grid');
+
+    function stripHtml(html) {
+      const tmp = document.createElement('div');
+      tmp.textContent = '';
+      // Parse safely — use textContent extraction
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      return doc.body.textContent || '';
+    }
+
+    function truncate(text, len) {
+      const clean = stripHtml(text).trim().replace(/\s+/g, ' ');
+      return clean.length > len ? clean.slice(0, len) + '\u2026' : clean;
+    }
+
+    function formatDate(dateStr) {
+      try {
+        const d = new Date(dateStr);
+        if (isNaN(d.getTime())) return '';
+        return d.toLocaleDateString('uk-UA', { day: 'numeric', month: 'long', year: 'numeric' });
+      } catch (e) { return ''; }
+    }
+
+    function parseRSS(xml) {
+      const doc = new DOMParser().parseFromString(xml, 'text/xml');
+      const item = doc.querySelector('item');
+      if (item) {
+        return {
+          title: item.querySelector('title')?.textContent || '',
+          link: item.querySelector('link')?.textContent || '',
+          date: item.querySelector('pubDate')?.textContent || '',
+          excerpt: item.querySelector('description')?.textContent || '',
+        };
+      }
+      const entry = doc.querySelector('entry');
+      if (entry) {
+        return {
+          title: entry.querySelector('title')?.textContent || '',
+          link: entry.querySelector('link')?.getAttribute('href') || '',
+          date: entry.querySelector('published')?.textContent || entry.querySelector('updated')?.textContent || '',
+          excerpt: entry.querySelector('summary')?.textContent || entry.querySelector('content')?.textContent || '',
+        };
+      }
+      return null;
+    }
+
+    function createEl(tag, className, textContent) {
+      const el = document.createElement(tag);
+      if (className) el.className = className;
+      if (textContent) el.textContent = textContent;
+      return el;
+    }
+
+    function renderSkeleton(name) {
+      const card = createEl('div', 'feed-card skeleton');
+      card.appendChild(createEl('div', 'feed-source', name));
+      card.appendChild(createEl('div', 'feed-title', '\u00A0'));
+      card.appendChild(createEl('div', 'feed-excerpt', '\u00A0'));
+      card.appendChild(createEl('div', 'feed-date', '\u00A0'));
+      return card;
+    }
+
+    function renderCard(name, post) {
+      const card = createEl('div', 'feed-card');
+      card.appendChild(createEl('div', 'feed-source', name));
+
+      const titleDiv = createEl('div', 'feed-title');
+      const link = document.createElement('a');
+      link.href = post.link;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = post.title;
+      titleDiv.appendChild(link);
+      card.appendChild(titleDiv);
+
+      card.appendChild(createEl('div', 'feed-excerpt', truncate(post.excerpt, 150)));
+      card.appendChild(createEl('div', 'feed-date', formatDate(post.date)));
+      return card;
+    }
+
+    function renderError(name, feedUrl) {
+      const card = createEl('div', 'feed-card');
+      card.appendChild(createEl('div', 'feed-source', name));
+      card.appendChild(createEl('div', 'feed-error', 'Не вдалося завантажити'));
+
+      const retry = createEl('button', 'feed-retry', 'Спробувати ще раз');
+      retry.addEventListener('click', function() {
+        const skeleton = renderSkeleton(name);
+        card.replaceWith(skeleton);
+        loadFeed(name, feedUrl, skeleton);
+      });
+      card.appendChild(retry);
+      return card;
+    }
+
+    async function loadFeed(name, feedUrl, cardEl) {
+      const cacheKey = 'rss_' + feedUrl;
+      try {
+        const cached = sessionStorage.getItem(cacheKey);
+        if (cached) {
+          const data = JSON.parse(cached);
+          if (Date.now() - data.ts < CACHE_TTL) {
+            cardEl.replaceWith(renderCard(name, data.post));
+            return;
+          }
+        }
+      } catch (e) { /* ignore cache errors */ }
+
+      try {
+        const res = await fetch(PROXY + encodeURIComponent(feedUrl));
+        const text = await res.text();
+        const post = parseRSS(text);
+        if (post && post.title) {
+          try { sessionStorage.setItem(cacheKey, JSON.stringify({ post: post, ts: Date.now() })); } catch (e) {}
+          cardEl.replaceWith(renderCard(name, post));
+        } else {
+          cardEl.replaceWith(renderError(name, feedUrl));
+        }
+      } catch (e) {
+        cardEl.replaceWith(renderError(name, feedUrl));
+      }
+    }
+
+    FEEDS.forEach(function(feed) {
+      const skeleton = renderSkeleton(feed.name);
+      grid.appendChild(skeleton);
+      loadFeed(feed.name, feed.url, skeleton);
+    });
+  </script>
+</body>
+</html>
