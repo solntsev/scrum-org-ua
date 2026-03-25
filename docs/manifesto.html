@@ -58,26 +58,17 @@
 
     .values {
       padding: 56px 48px 0;
-      display: flex; flex-direction: column; gap: 0;
+      display: flex; flex-direction: column; gap: 20px;
       max-width: 720px; margin: 0 auto;
+      text-align: center;
     }
     .value-item {
-      padding: 32px 0;
-      border-bottom: 1px solid rgba(26,26,26,0.08);
+      font-size: 20px; line-height: 30px; color: #5A5550;
     }
-    .value-item:last-child { border-bottom: none; }
-    .value-primary {
+    .value-item strong {
       font-family: 'Space Grotesk', system-ui, sans-serif;
-      font-weight: 700; font-size: 32px; color: #1A1A1A;
-      letter-spacing: -0.03em; line-height: 38px;
-      margin-bottom: 8px;
-    }
-    .value-over {
-      font-weight: 300; font-size: 15px; color: #B5B0AA;
-      line-height: 24px;
-    }
-    .value-over span {
-      color: #8A8580;
+      font-weight: 700; font-size: 24px; color: #1A1A1A;
+      letter-spacing: -0.02em;
     }
 
     .values-note {
@@ -168,7 +159,8 @@
       .nav-links { display: none; }
       .nav-label { display: none; }
       .hero-title { font-size: 32px; line-height: 36px; }
-      .value-primary { font-size: 24px; line-height: 30px; }
+      .value-item { font-size: 17px; }
+      .value-item strong { font-size: 20px; }
       .principles-title { font-size: 24px; }
       .footer { flex-direction: column; gap: 16px; text-align: center; }
       .footer-left { flex-wrap: wrap; justify-content: center; }
@@ -198,22 +190,10 @@
     </div>
 
     <div class="values">
-      <div class="value-item">
-        <div class="value-primary">Люди та співпраця</div>
-        <div class="value-over">важливіші за <span>процеси та інструменти</span></div>
-      </div>
-      <div class="value-item">
-        <div class="value-primary">Працюючий продукт</div>
-        <div class="value-over">важливіший за <span>вичерпну документацію</span></div>
-      </div>
-      <div class="value-item">
-        <div class="value-primary">Співпраця із замовником</div>
-        <div class="value-over">важливіша за <span>обговорення умов контракту</span></div>
-      </div>
-      <div class="value-item">
-        <div class="value-primary">Готовність до змін</div>
-        <div class="value-over">важливіша за <span>дотримання плану</span></div>
-      </div>
+      <p class="value-item"><strong>Люди та співпраця</strong> важливіші за процеси та інструменти</p>
+      <p class="value-item"><strong>Працюючий продукт</strong> важливіший за вичерпну документацію</p>
+      <p class="value-item"><strong>Співпраця із замовником</strong> важливіша за обговорення умов контракту</p>
+      <p class="value-item"><strong>Готовність до змін</strong> важливіша за дотримання плану</p>
     </div>
 
     <p class="values-note">Тобто, хоча цінності, що справа, важливі, ми все ж цінуємо більше те, що зліва.</p>
