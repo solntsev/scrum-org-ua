@@ -16,6 +16,7 @@
       background-color: #F5F2EE;
       color: #1A1A1A;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
       -moz-osx-font-smoothing: grayscale;
     }
 
@@ -345,6 +346,27 @@
       color: #8A8580;
     }
 
+    /* Burger */
+    .burger {
+      display: none;
+      background: none; border: none; cursor: pointer; padding: 8px;
+      flex-direction: column; gap: 5px; z-index: 101;
+    }
+    .burger span {
+      display: block; width: 22px; height: 2px; background: #1A1A1A;
+      border-radius: 1px; transition: transform 0.3s, opacity 0.3s;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-overlay {
+      display: none;
+      position: fixed; inset: 0; background: rgba(26,26,26,0.3);
+      z-index: 99;
+    }
+    .nav-overlay.open { display: block; }
+
     /* Responsive */
     @media (max-width: 1024px) {
       .nav, .hero, .section-header, .pres-grid, .about, .footer { padding-left: 40px; padding-right: 40px; }
@@ -361,8 +383,29 @@
     @media (max-width: 768px) {
       .nav, .hero, .section-header, .pres-grid, .about, .footer { padding-left: 24px; padding-right: 24px; }
       .divider, .cta-banner { margin-left: 24px; margin-right: 24px; }
-      .nav-links { gap: 24px; }
       .nav-label { display: none; }
+      .burger { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed; top: 0; right: 0;
+        width: 260px; height: 100vh;
+        background: #F5F2EE;
+        flex-direction: column;
+        padding: 80px 32px 32px;
+        gap: 0;
+        z-index: 100;
+        box-shadow: -4px 0 24px rgba(26,26,26,0.08);
+        list-style: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a {
+        display: block;
+        padding: 16px 0;
+        font-size: 17px;
+        border-bottom: 1px solid rgba(26,26,26,0.06);
+      }
+      .nav-links .muted { color: #1A1A1A; }
       .hero-title { font-size: 40px; line-height: 44px; }
       .hero-cards { flex-direction: column; }
       .book-col.offset { padding-top: 0; }
@@ -384,7 +427,9 @@
         <a href="/" class="nav-logo">SCRUM.ORG.UA</a>
         <span class="nav-label">Бібліотека</span>
       </div>
-      <ul class="nav-links">
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#books">Книги</a></li>
         <li><a href="#presentations">Презентації</a></li>
         <li><a href="#about" class="muted">Про нас</a></li>
@@ -540,5 +585,27 @@
     </footer>
 
   </div>
+  <script>
+    (function() {
+      var burger = document.getElementById('burger');
+      var links = document.getElementById('nav-links');
+      var overlay = document.getElementById('nav-overlay');
+      function toggle() {
+        burger.classList.toggle('open');
+        links.classList.toggle('open');
+        overlay.classList.toggle('open');
+      }
+      function close() {
+        burger.classList.remove('open');
+        links.classList.remove('open');
+        overlay.classList.remove('open');
+      }
+      burger.addEventListener('click', toggle);
+      overlay.addEventListener('click', close);
+      links.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') close();
+      });
+    })();
+  </script>
 </body>
 </html>
