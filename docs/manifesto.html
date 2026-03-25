@@ -62,29 +62,22 @@
       max-width: 720px; margin: 0 auto;
     }
     .value-item {
-      display: flex; align-items: center;
-      padding: 28px 0;
+      padding: 32px 0;
       border-bottom: 1px solid rgba(26,26,26,0.08);
     }
     .value-item:last-child { border-bottom: none; }
-    .value-left {
+    .value-primary {
       font-family: 'Space Grotesk', system-ui, sans-serif;
-      font-weight: 700; font-size: 28px; color: #1A1A1A;
-      letter-spacing: -0.02em; line-height: 34px;
-      flex: 1;
+      font-weight: 700; font-size: 32px; color: #1A1A1A;
+      letter-spacing: -0.03em; line-height: 38px;
+      margin-bottom: 8px;
     }
-    .value-arrow {
-      font-family: 'Space Grotesk', system-ui, sans-serif;
-      font-weight: 700; font-size: 24px; color: #E63B2E;
-      padding: 0 24px;
-      flex-shrink: 0;
+    .value-over {
+      font-weight: 300; font-size: 15px; color: #B5B0AA;
+      line-height: 24px;
     }
-    .value-right {
-      font-weight: 300; font-size: 16px; color: #B5B0AA;
-      line-height: 22px;
-      flex: 1;
-      text-decoration: line-through;
-      text-decoration-color: rgba(181,176,170,0.4);
+    .value-over span {
+      color: #8A8580;
     }
 
     .values-note {
@@ -175,10 +168,7 @@
       .nav-links { display: none; }
       .nav-label { display: none; }
       .hero-title { font-size: 32px; line-height: 36px; }
-      .value-item { flex-direction: column; align-items: flex-start; gap: 4px; }
-      .value-left { font-size: 22px; line-height: 28px; }
-      .value-arrow { display: none; }
-      .value-right { font-size: 14px; }
+      .value-primary { font-size: 24px; line-height: 30px; }
       .principles-title { font-size: 24px; }
       .footer { flex-direction: column; gap: 16px; text-align: center; }
       .footer-left { flex-wrap: wrap; justify-content: center; }
@@ -209,24 +199,20 @@
 
     <div class="values">
       <div class="value-item">
-        <span class="value-left">Люди та співпраця</span>
-        <span class="value-arrow">›</span>
-        <span class="value-right">процеси та інструменти</span>
+        <div class="value-primary">Люди та співпраця</div>
+        <div class="value-over">важливіші за <span>процеси та інструменти</span></div>
       </div>
       <div class="value-item">
-        <span class="value-left">Працюючий продукт</span>
-        <span class="value-arrow">›</span>
-        <span class="value-right">вичерпну документацію</span>
+        <div class="value-primary">Працюючий продукт</div>
+        <div class="value-over">важливіший за <span>вичерпну документацію</span></div>
       </div>
       <div class="value-item">
-        <span class="value-left">Співпраця із замовником</span>
-        <span class="value-arrow">›</span>
-        <span class="value-right">обговорення умов контракту</span>
+        <div class="value-primary">Співпраця із замовником</div>
+        <div class="value-over">важливіша за <span>обговорення умов контракту</span></div>
       </div>
       <div class="value-item">
-        <span class="value-left">Готовність до змін</span>
-        <span class="value-arrow">›</span>
-        <span class="value-right">дотримання плану</span>
+        <div class="value-primary">Готовність до змін</div>
+        <div class="value-over">важливіша за <span>дотримання плану</span></div>
       </div>
     </div>
 
