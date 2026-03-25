@@ -1,0 +1,39 @@
+# Scrum.org.ua
+
+> Безкоштовна бібліотека перекладів найкращих книг та презентацій про Agile, Scrum та Kanban українською мовою. Спільнота краудсорсингових перекладів з 2008 року.
+
+## Книги
+
+- [Scrum і XP: нотатки з передової](https://scrum.org.ua/wp-content/uploads/2008/12/scrum_xp-from-the-trenches-rus-final.pdf) — Henrik Kniberg, 2008. Практичний посібник з впровадження Scrum та Extreme Programming.
+- [Kanban і Scrum: витискаємо максимум](https://scrum.org.ua/wp-content/uploads/ScrumAndKanbanRuFinal.pdf) — Henrik Kniberg & Mattias Skarin, 2010. Порівняння Kanban та Scrum, як поєднати обидва підходи.
+
+## Презентації (PDF)
+
+- Управління проєктами в умовах невизначеності — Олексій Солнцев, 2016
+- Управління складністю в проєктах — Олексій Солнцев, PM Day 2016
+- Бути ІТ-шніком та обирати життя в Україні – це реально — Олексій Солнцев, 2016
+- Управління очікуваннями замовника при побудові R&D центру в Україні — Олексій Солнцев, PM Community 2015
+- Agile: вид з вікна тренажерного залу — Олексій Солнцев, Agile PechaKucha 2010
+- How to Be Proud When You Are Done — 2010
+- XP Injection — IT Jam 2009
+- Post Agile — Олексій Солнцев
+- Перший український краудсорсинговий проєкт — Олексій Солнцев
+
+## Презентації (SlideShare)
+
+- [NoSQL — вибух можливостей](https://www.slideshare.net/slideshow/nosql-12572064/12572064) — Олексій Солнцев
+- [NoSQL: що всередині?](https://www.slideshare.net/slideshow/nosql-whats-under-the-hood/9656414) — Олексій Солнцев
+- [Maven 3: вулична магія](https://www.slideshare.net/slideshow/maven-3/8056921) — Олексій Солнцев
+- [Ретроспектива: вперед у минуле](https://www.slideshare.net/slideshow/ss-7656474/7656474) — Олексій Солнцев
+- [Огляд коду](https://www.slideshare.net/slideshow/code-review-without-animation/4407402) — Олексій Солнцев
+- [Infopulse: як ми робимо Scrum](https://www.slideshare.net/slideshow/infopulse-how-we-do-scrum-presentation/654269) — Олексій Солнцев
+- [Agile команда](https://www.slideshare.net/slideshow/agile-team/338981) — Олексій Солнцев
+
+## Про спільноту
+
+Scrum.org.ua — це спільнота ентузіастів, яка з 2008 року займається краудсорсинговим перекладом найкращих книг і презентацій про гнучкі методології розробки програмного забезпечення. Усі матеріали безкоштовні та доступні для завантаження у форматі PDF.
+
+## Контакт
+
+- Сайт: https://scrum.org.ua
+- GitHub: https://github.com/solntsev/scrum-org-ua

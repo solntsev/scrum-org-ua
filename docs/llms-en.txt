@@ -1,0 +1,39 @@
+# Scrum.org.ua
+
+> A free library of crowdsourced translations of the best Agile, Scrum, and Kanban books and presentations into Ukrainian. Community-driven since 2008.
+
+## Books
+
+- [Scrum and XP from the Trenches](https://scrum.org.ua/wp-content/uploads/2008/12/scrum_xp-from-the-trenches-rus-final.pdf) — Henrik Kniberg, 2008. A practical guide to implementing Scrum and Extreme Programming.
+- [Kanban and Scrum: Making the Most of Both](https://scrum.org.ua/wp-content/uploads/ScrumAndKanbanRuFinal.pdf) — Henrik Kniberg & Mattias Skarin, 2010. Comparing Kanban and Scrum, how to combine both approaches.
+
+## Presentations (PDF)
+
+- Project Management Under Uncertainty — Oleksiy Solntsev, 2016
+- Complexity Management in Projects — Oleksiy Solntsev, PM Day 2016
+- Being an IT Professional and Choosing Life in Ukraine — Oleksiy Solntsev, 2016
+- Expectations Management When Building an R&D Center in Ukraine — Oleksiy Solntsev, PM Community 2015
+- Agile: A View from the Gym Window — Oleksiy Solntsev, Agile PechaKucha 2010
+- How to Be Proud When You Are Done — 2010
+- XP Injection — IT Jam 2009
+- Post Agile — Oleksiy Solntsev
+- The First Ukrainian Crowdsourcing Project — Oleksiy Solntsev
+
+## Presentations (SlideShare)
+
+- [NoSQL — Explosion of Possibilities](https://www.slideshare.net/slideshow/nosql-12572064/12572064) — Oleksiy Solntsev
+- [NoSQL: What's Under the Hood?](https://www.slideshare.net/slideshow/nosql-whats-under-the-hood/9656414) — Oleksiy Solntsev
+- [Maven 3: Street Magic](https://www.slideshare.net/slideshow/maven-3/8056921) — Oleksiy Solntsev
+- [Retrospective: Back to the Future](https://www.slideshare.net/slideshow/ss-7656474/7656474) — Oleksiy Solntsev
+- [Code Review](https://www.slideshare.net/slideshow/code-review-without-animation/4407402) — Oleksiy Solntsev
+- [Infopulse: How We Do Scrum](https://www.slideshare.net/slideshow/infopulse-how-we-do-scrum-presentation/654269) — Oleksiy Solntsev
+- [Agile Team](https://www.slideshare.net/slideshow/agile-team/338981) — Oleksiy Solntsev
+
+## About
+
+Scrum.org.ua is a community of enthusiasts that has been crowdsourcing translations of the best books and presentations on agile software development methodologies since 2008. All materials are free and available for download in PDF format.
+
+## Contact
+
+- Website: https://scrum.org.ua
+- GitHub: https://github.com/solntsev/scrum-org-ua
