@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GBJ6YERLE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1GBJ6YERLE');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Many Hats of the Product Manager — Scrum.org.ua</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #F5F2EE;
+      color: #1A1A1A;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .page { max-width: 1440px; margin: 0 auto; width: 100%; flex: 1; display: flex; flex-direction: column; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 32px 80px;
+    }
+    .nav-brand { display: flex; align-items: baseline; gap: 12px; }
+    .nav-logo {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 22px; color: #1A1A1A;
+      letter-spacing: -0.03em; text-decoration: none;
+    }
+    .nav-label {
+      font-weight: 300; font-size: 13px; color: #8A8580;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+    .nav-links a { font-weight: 400; font-size: 15px; color: #1A1A1A; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: #E63B2E; }
+    .nav-links .muted { color: #8A8580; }
+    .breadcrumb {
+      padding: 0 80px 24px;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: #8A8580;
+    }
+    .breadcrumb a { color: #8A8580; text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #1A1A1A; }
+    .breadcrumb-sep { color: #ccc; }
+    .pres-hero {
+      padding: 0 80px 32px;
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
+    }
+    .pres-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 36px; color: #1A1A1A;
+      letter-spacing: -0.03em; line-height: 40px;
+      max-width: 700px;
+    }
+    .pres-meta {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0;
+    }
+    .pres-author { font-weight: 400; font-size: 14px; color: #5A5550; }
+    .pres-event {
+      font-weight: 400; font-size: 12px; color: #E63B2E;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .viewer {
+      margin: 0 80px;
+      flex: 1;
+      min-height: 70vh;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(26,26,26,0.08);
+      background: #fff;
+      position: relative;
+    }
+    .viewer iframe {
+      width: 100%; height: 100%; min-height: 70vh; border: none; display: block;
+    }
+    .pres-actions {
+      padding: 24px 80px 0;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .btn-download {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 28px; background-color: #E63B2E; border-radius: 4px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 500; font-size: 14px; color: #fff;
+      text-decoration: none; transition: background-color 0.2s;
+    }
+    .btn-download:hover { background-color: #cc3226; }
+    .btn-back {
+      font-weight: 400; font-size: 14px; color: #8A8580;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .btn-back:hover { color: #1A1A1A; }
+    .footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 40px 80px; margin-top: 48px;
+      border-top: 1px solid rgba(26,26,26,0.08);
+    }
+    .footer-left { display: flex; align-items: baseline; gap: 32px; }
+    .footer-logo {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700; font-size: 18px; color: #1A1A1A;
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .footer-left a { font-weight: 300; font-size: 13px; color: #8A8580; text-decoration: none; transition: color 0.2s; }
+    .footer-left a:hover { color: #1A1A1A; }
+    .footer-copy { font-weight: 300; font-size: 12px; color: #8A8580; }
+    @media (max-width: 1024px) {
+      .nav, .breadcrumb, .pres-hero, .pres-actions, .footer { padding-left: 40px; padding-right: 40px; }
+      .viewer { margin-left: 40px; margin-right: 40px; }
+      .pres-title { font-size: 28px; line-height: 32px; }
+    }
+    @media (max-width: 768px) {
+      .nav, .breadcrumb, .pres-hero, .pres-actions, .footer { padding-left: 24px; padding-right: 24px; }
+      .viewer { margin-left: 24px; margin-right: 24px; }
+      .nav-links { gap: 24px; }
+      .nav-label { display: none; }
+      .pres-hero { flex-direction: column; align-items: flex-start; }
+      .pres-meta { align-items: flex-start; }
+      .pres-title { font-size: 24px; line-height: 28px; }
+      .footer { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-left { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <div class="nav-brand">
+        <a href="/" class="nav-logo">SCRUM.ORG.UA</a>
+        <span class="nav-label">Бібліотека</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/#books">Книги</a></li>
+        <li><a href="/#presentations">Презентації</a></li>
+        <li><a href="/#about" class="muted">Про нас</a></li>
+        <li><a href="/trends.html" class="muted">Тренди</a></li>
+      </ul>
+    </nav>
+
+    <div class="breadcrumb">
+      <a href="/">Головна</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="/#presentations">Презентації</a>
+      <span class="breadcrumb-sep">/</span>
+      <span style="color: #1A1A1A;">The Many Hats of the Product Manager</span>
+    </div>
+
+    <div class="pres-hero">
+      <h1 class="pres-title">The Many Hats of the Product Manager</h1>
+      <div class="pres-meta">
+        <span class="pres-author">Олексій Солнцев</span>
+        <span class="pres-event">SlideShare</span>
+      </div>
+    </div>
+
+    <div class="viewer">
+      <iframe src="https://www.slideshare.net/slideshow/embed_code/286778548" title="The Many Hats of the Product Manager" allowfullscreen></iframe>
+    </div>
+
+    <div class="pres-actions">
+      <a href="https://www.slideshare.net/slideshow/the-many-hats-of-the-product-manager-pptx/286778548" target="_blank" rel="noopener" class="btn-download">Відкрити на SlideShare</a>
+      <a href="/#presentations" class="btn-back">← Усі презентації</a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <a href="/" class="footer-logo">SCRUM.ORG.UA</a>
+        <a href="/#books">Книги</a>
+        <a href="/#presentations">Презентації</a>
+        <a href="/#about">Про нас</a>
+        <a href="/trends.html">Тренди</a>
+      </div>
+      <span class="footer-copy">&copy; 2010–2026 Спільнота перекладачів Agile літератури</span>
+    </footer>
+  </div>
+</body>
+</html>
